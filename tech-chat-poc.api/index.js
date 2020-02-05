@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // connect to database
-mongoose.connect(process.env.DB_LOCAL, { useNewUrlParser: true })
+mongoose.connect(process.env.DB_ATLAS, { useNewUrlParser: true })
   .then(() => console.log('Database connected successfully'))
   .catch(err => console.log(err));
 

@@ -28,16 +28,17 @@ Latest technology POC repo - MERN stack for now, build on it later
 * Complete [**Mongo Shell**](https://docs.mongodb.com/manual/mongo/) documentation
 * To start MongoDB service use - `<Installation_Path>\mongodb.exe --dbpath="<Database_Directory>"`
 
-* Alternately, use [**mongoDB Atlas**](https://www.mongodb.com/cloud/atlas) - Cloud based DB server (Cluster from AWS. ther options are GCP and Azure)
+* Alternately, use [**mongoDB Atlas**](https://www.mongodb.com/cloud/atlas) - Cloud based DB server (Cluster from AWS. Other options are GCP and Azure)
   - Can use the same DB in the cluster or you can create your own DB
-  - To use this port 27017 port must be opened from the system
+  - To use this port 27017 port must be opened from your system
 
-# Further development
+# Next steps
 * Routing in react
 * [**Redux State Container**](https://redux.js.org/) using [**react-redux**](https://react-redux.js.org/introduction/quick-start)
 * [**Redux observables**](https://redux-observable.js.org/)
 * Currently using [**fetch API**](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) but can use [**Axios**](https://github.com/axios/axios)
 * Implement async-await in FE
+* Use a forntend Ui framework (eg: Bootstrap)
 
 # Best practices, Tips, Tricks, Further Reads
 * [**mongoDB Compass**](https://docs.mongodb.com/compass/current/) - GUI for mongoDB
@@ -49,7 +50,7 @@ Latest technology POC repo - MERN stack for now, build on it later
 
 # Future & misc
 * Come up with best practices, code structure
-* **Docker Compose** to containerize and run all applications
+* [**Docker Compose**](https://docs.docker.com/compose/) to containerize and run all applications
 * [**Expo CLI**](https://expo.io/) for cross platform application builds (with React Native and CircleCI)
 * [**mongoDB Stitch**](https://www.mongodb.com/cloud/stitch) for serverless MongoDB platform
 * [**MongoDB Charts**](https://docs.mongodb.com/charts/master/) for data visualization
