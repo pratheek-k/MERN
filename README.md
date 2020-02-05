@@ -37,19 +37,19 @@ Latest technology POC repo - MERN stack for now, build on it later
 * [**Redux State Container**](https://redux.js.org/) using [**react-redux**](https://react-redux.js.org/introduction/quick-start)
 * [**Redux observables**](https://redux-observable.js.org/)
 * Currently using [**fetch API**](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) but can use [**Axios**](https://github.com/axios/axios)
+* Implement async-await in FE
 
-# Tips, Tricks & Further Reads
+# Best practices, Tips, Tricks, Further Reads
 * [**mongoDB Compass**](https://docs.mongodb.com/compass/current/) - GUI for mongoDB
 * [**Security guidelines**](https://docs.mongodb.com/manual/administration/security-checklist/) for MongoDB
 * Use [**Nodemon**](https://www.npmjs.com/package/nodemon) to automatically restart server with changes
 * Use [**Concurrently**](https://www.npmjs.com/package/concurrently) to run multiple commands concurrently
 * [**The Twelve-Factor App**](https://12factor.net/)
 * [**Atomic design**](https://bradfrost.com/blog/post/atomic-web-design/)
-* Implement async-await in FE
 
-# Future
+# Future & misc
 * Come up with best practices, code structure
 * **Docker Compose** to containerize and run all applications
-* **Expo CLI** for cross platform application builds (with React Native and CircleCI) - [expo](https://expo.io/)
-* **mongoDB Stitch** for serverless MongoDB platform - [mongoDB Stitch](https://www.mongodb.com/cloud/stitch)
-* **MongoDB Charts** for data visualization - [Charts](https://docs.mongodb.com/charts/master/)
+* [**Expo CLI**](https://expo.io/) for cross platform application builds (with React Native and CircleCI)
+* [**mongoDB Stitch**](https://www.mongodb.com/cloud/stitch) for serverless MongoDB platform
+* [**MongoDB Charts**](https://docs.mongodb.com/charts/master/) for data visualization
