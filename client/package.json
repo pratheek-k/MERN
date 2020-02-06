@@ -1,6 +1,7 @@
 {
-  "name": "tech-chat-poc.web",
+  "name": "mern-poc-client",
   "version": "0.1.0",
+  "description": "Client project for MERN POC project",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

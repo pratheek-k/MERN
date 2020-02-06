@@ -7,14 +7,14 @@ Latest technology POC repo - MERN stack for now, build on it later
 * ***MongoDB Installed***
 
 # Frontend
-* Project created with **npx create-react-app** command [Create react app](https://reactjs.org/docs/create-a-new-react-app.html). Includes - *react*, *react-dom*, *Webpack*, *Babel*, *ESLint*, *JSX*, *ES6*, *Typescript*, *Flow syntax*, *Unit test runner*, *Coverage report*, *Dev server*, *Build script for JS, CSS and images*, *Service worker*
+* Project created with **`npx create-react-app`** command from [Create react app](https://reactjs.org/docs/create-a-new-react-app.html). Includes - *react*, *react-dom*, *Webpack*, *Babel*, *ESLint*, *JSX*, *ES6*, *Typescript*, *Flow syntax*, *Unit test runner*, *Coverage report*, *Dev server*, *Build script for JS, CSS and images*, *Service worker*
 * Currently using [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) but can use [Axios](https://github.com/axios/axios)
-* To run application - `npm start`
+* To run application - **`npm start`**
 
 # Server
 * Using [**mongoose**](https://mongoosejs.com/) - mongodb object modeling
 * Using [**dotenv**](https://www.npmjs.com/package/dotenv) to load environments
-* To run application - `node index` or if using nodemon - `nodemon index`
+* To run application - **`node index`** or if using nodemon - **`nodemon index`**
 
 # Database
 * Using **mongodb local database instance**
@@ -23,10 +23,10 @@ Latest technology POC repo - MERN stack for now, build on it later
     - Comes preinstalled with **mongoose**
     - [**Native driver**](http://mongodb.github.io/node-mongodb-native/3.4/quick-start/quick-start/)
   - Install [**MongoDB Compass**](https://www.mongodb.com/products/compass) for GUI connection
-* Start a **mongod process** use - `mongod --dbpath=<Database_Directory>`
+* Start a **mongod process** use - **`mongod --dbpath=<Database_Directory>`**
   - mongod process has to be running to connect mongo shell to MongoDB
   - MongoDB installation path should be added to PATH env variable to run with mongod command from anywhere or you have to be in the installation folder in cmd
-* Run **mongo shell** - `mongo`
+* Run **mongo shell** - **`mongo`**
   - default port is 27017
   - mongo shell is included as part of MongoDB server installer
   - MongoDB installation path should be added to PATH env variable to run with mongo command or you have to be in the installation folder in cmd
