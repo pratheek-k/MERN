@@ -8,25 +8,29 @@ Latest technology POC repo - MERN stack for now, build on it later
 
 # Frontend
 * Project created with **npx create-react-app** command [Create react app](https://reactjs.org/docs/create-a-new-react-app.html). Includes - *react*, *react-dom*, *Webpack*, *Babel*, *ESLint*, *JSX*, *ES6*, *Typescript*, *Flow syntax*, *Unit test runner*, *Coverage report*, *Dev server*, *Build script for JS, CSS and images*, *Service worker*
-* To run application - `npm start`
 * Currently using [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) but can use [Axios](https://github.com/axios/axios)
+* To run application - `npm start`
 
 # Server
 * Using [**mongoose**](https://mongoosejs.com/) - mongodb object modeling
 * Using [**dotenv**](https://www.npmjs.com/package/dotenv) to load environments
+* To run application - `node index` or if using nodemon - `nodemon index`
 
 # Database
 * Using **mongodb local database instance**
-  - Need to install [**MongoDB**](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) in you machine
-  - Using [**MongoDB driver**](http://mongodb.github.io/node-mongodb-native/3.4/quick-start/quick-start/) for NodeJS
-  - Install **MongoDB Compass** for GUI connection (comes as an option in MongoDB installer)
-* To start a **mongod process** use - `mongod --dbpath=<Database_Directory>` (mongod process has to be running to connect mongo shell to MongoDB)
-* To run **mongo shell** - `mongo`
+  - Install [**MongoDB**](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) in you machine
+  - Install **MongoDB driver**
+    - Comes preinstalled with **mongoose**
+    - [**Native driver**](http://mongodb.github.io/node-mongodb-native/3.4/quick-start/quick-start/)
+  - Install [**MongoDB Compass**](https://www.mongodb.com/products/compass) for GUI connection
+* Start a **mongod process** use - `mongod --dbpath=<Database_Directory>`
+  - mongod process has to be running to connect mongo shell to MongoDB
+  - MongoDB installation path should be added to PATH env variable to run with mongod command from anywhere or you have to be in the installation folder in cmd
+* Run **mongo shell** - `mongo`
   - default port is 27017
   - mongo shell is included as part of MongoDB server installer
-  - mongodb installation folder should be added to PATH env variable to run with mongo command
-* Complete [**Mongo Shell**](https://docs.mongodb.com/manual/mongo/) documentation
-* To start MongoDB service use - `<Installation_Path>\mongodb.exe --dbpath="<Database_Directory>"`
+  - MongoDB installation path should be added to PATH env variable to run with mongo command or you have to be in the installation folder in cmd
+  - Complete [**Mongo Shell**](https://docs.mongodb.com/manual/mongo/) documentation
 
 * Alternately, use [**mongoDB Atlas**](https://www.mongodb.com/cloud/atlas) - Cloud based DB server (Cluster from AWS. Other options are GCP and Azure)
   - Can use the same DB in the cluster or you can create your own DB
