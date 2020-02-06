@@ -50,12 +50,17 @@ Latest technology POC repo - MERN stack for now, build on it later
   - [**React Bootstrap**](https://react-bootstrap.github.io/)
 
 # Best practices, Tips, Tricks, Further Reads
-* [**Composition over inheritence**](https://reactjs.org/docs/composition-vs-inheritance.html)
-* [**Thinking in react**](https://reactjs.org/docs/thinking-in-react.html)
-* [**mongoDB Compass**](https://docs.mongodb.com/compass/current/) - GUI for mongoDB
 * [**Security guidelines**](https://docs.mongodb.com/manual/administration/security-checklist/) for MongoDB
 * Use [**Nodemon**](https://www.npmjs.com/package/nodemon) to automatically restart server with changes
 * Use [**Concurrently**](https://www.npmjs.com/package/concurrently) to run multiple commands concurrently
+* **Thinking in react**
+  - [**Thinking in react**](https://reactjs.org/docs/thinking-in-react.html)
+  - [**What & Why JSX**](https://reactjs.org/docs/introducing-jsx.html)
+  - [**React rethinking**](https://www.youtube.com/watch?v=x7cQ3mrcKaY)
+  - [**Composition over inheritence**](https://reactjs.org/docs/composition-vs-inheritance.html)
+* **React with Typescript**
+  - [**Start project with typescript**](https://create-react-app.dev/docs/adding-typescript/)
+  - [**Wire up typescript with react**](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
 * [**The Twelve-Factor App**](https://12factor.net/)
 * [**Atomic design**](https://bradfrost.com/blog/post/atomic-web-design/)
 
