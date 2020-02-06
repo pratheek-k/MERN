@@ -41,7 +41,9 @@ Latest technology POC repo - MERN stack for now, build on it later
 * [**ReactiveX**](http://reactivex.io/) with [**Redux observables**](https://redux-observable.js.org/) or [**rxjs**](https://rxjs-dev.firebaseapp.com/)
 * Currently using [**fetch API**](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) but can use [**Axios**](https://github.com/axios/axios)
 * Implement async-await in FE
-* Use a forntend Ui framework (eg: Bootstrap)
+* Use a UI framework
+  - [**Prime React**](https://www.primefaces.org/primereact/#/)
+  - [**React Bootstrap**](https://react-bootstrap.github.io/)
 
 # Best practices, Tips, Tricks, Further Reads
 * [**Composition over inheritence**](https://reactjs.org/docs/composition-vs-inheritance.html)
