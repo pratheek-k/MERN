@@ -7,7 +7,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "bootstrap": "^4.4.1",
     "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.1"
   },
@@ -15,7 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "develop": "concurrently \"npm run start\" \"cd.. && cd server && npm run develop\" \"mongod --dbpath=\"C:\\Database\\MongoDB\"\" \"mongo --port 27017\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +34,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
   }
 }

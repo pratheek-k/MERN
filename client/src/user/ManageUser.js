@@ -56,7 +56,7 @@ class ManageUser extends Component {
       <div>
         {errorDiv}
         <UserAdd onSuccess={this.getAllUsers} />
-        <UserList users={this.state.users} onDelete={this.deleteUser} />
+        <UserList users={users} onDelete={this.deleteUser} />
       </div>
     )
   }

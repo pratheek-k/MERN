@@ -6,15 +6,28 @@ Latest technology POC repo - MERN stack for now, build on it later
 * ***NPM >= 5.6_***
 * ***MongoDB Installed***
 
+# Technologies and Tools
+* **Frontend** - *ReactJS, React Bootstrap*
+* **Server** - *Node, Express, Mongoose*
+* **Database** - *MongoDB (Alt: Cloud based Atlas/Stitch)*
+* **App management** - *CircleCI(Alt: Azure), Heroku(Alt: OpenShift, OpenStack, CloudFoundry, Azure, AWS)*
+
+**To run entire application (Client, Server, Local DB instance) - *`npm run develop`***
+  - Have to be inside client project directory
+  - Need to have concurrently installed (included as dev dependency for client app)
+  - Need to have nodemon installed (included as dev dependency for server app)
+  - Need to have MongoDB with the installation directory in PATH environment variable
+  - Default database directory is *`C:\Database\MongoDB`*. Default port is 27017
+
 # Frontend
-* Project created with **`npx create-react-app`** command from [Create react app](https://reactjs.org/docs/create-a-new-react-app.html). Includes - *react*, *react-dom*, *Webpack*, *Babel*, *ESLint*, *JSX*, *ES6*, *Typescript*, *Flow syntax*, *Unit test runner*, *Coverage report*, *Dev server*, *Build script for JS, CSS and images*, *Service worker*
-* Currently using [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) but can use [Axios](https://github.com/axios/axios)
+* Project created with **`npx create-react-app`** command from [**Create react app**](https://reactjs.org/docs/create-a-new-react-app.html). Includes - *react, react-dom, Webpack, Babel, ESLint, JSX, ES6, Typescript, Flow syntax, Unit test runner, Coverage report, Dev server, Build script for JS, CSS and images, Service worker*
+* Currently using [**fetch API**](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) but can use [**Axios**](https://github.com/axios/axios)
 * To run application - **`npm start`**
 
 # Server
 * Using [**mongoose**](https://mongoosejs.com/) - mongodb object modeling
 * Using [**dotenv**](https://www.npmjs.com/package/dotenv) to load environments
-* To run application - **`node index`** or if using nodemon - **`nodemon index`**
+* To run application - **`npm run develop`** or **`nodemon index`**. If no nodemon - **`node index`**
 
 # Database
 * Using **mongodb local database instance**
