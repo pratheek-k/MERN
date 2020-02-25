@@ -22,12 +22,12 @@ Latest technology POC repo - MERN stack for now, build on it later
 # Frontend
 * Project created with **`npx create-react-app`** command from [**Create react app**](https://reactjs.org/docs/create-a-new-react-app.html). Includes - *react, react-dom, Webpack, Babel, ESLint, JSX, ES6, Typescript, Flow syntax, Unit test runner, Coverage report, Dev server, Build script for JS, CSS and images, Service worker*
 * Currently using [**fetch API**](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) but can use [**Axios**](https://github.com/axios/axios)
-* To run application - **`npm start`**
+* To run application - **`npm start`** or **`npm run client`**
 
 # Server
-* Using [**mongoose**](https://mongoosejs.com/) - mongodb object modeling
+* Using [**mongoose**](https://mongoosejs.com/)
 * Using [**dotenv**](https://www.npmjs.com/package/dotenv) to load environments
-* To run application - **`npm run develop`** or **`nodemon index`**. If no nodemon - **`node index`**
+* To run application - **`npm run server`**. If no nodemon installed - **`npm start`**
 
 # Database
 * Using **mongodb local database instance**
@@ -45,14 +45,15 @@ Latest technology POC repo - MERN stack for now, build on it later
   - MongoDB installation path should be added to PATH env variable to run with mongo command or you have to be in the installation folder in cmd
   - Complete [**Mongo Shell**](https://docs.mongodb.com/manual/mongo/) documentation
 
-* Alternately, use [**mongoDB Atlas**](https://www.mongodb.com/cloud/atlas) - Cloud based DB server (Cluster from AWS. Other options are GCP and Azure)
-  - Can use the same DB in the cluster or you can create your own DB
+* Alternately, use [**mongoDB Atlas**](https://www.mongodb.com/cloud/atlas) (previously mLab) - Cloud based DB server
+  - This takes care of all the security measures
   - To use this port 27017 port must be opened from your system
 
 # Next steps
 * Authentication and authorization
   - [**Blog 1**](https://medium.com/swlh/jwt-authentication-authorization-in-nodejs-express-mongodb-rest-apis-2019-ad14ec818122)
   - [**Blog 2**](https://medium.com/quick-code/handling-authentication-and-authorization-with-node-7f9548fedde8)
+* ES6 in Node server application
 * Declarative routing in react with [**react-router**](https://www.npmjs.com/package/react-router)
 * [**Redux State Container**](https://redux.js.org/) using [**react-redux**](https://react-redux.js.org/introduction/quick-start)
 * [**ReactiveX**](http://reactivex.io/) with [**Redux observables**](https://redux-observable.js.org/) or [**rxjs**](https://rxjs-dev.firebaseapp.com/)
@@ -64,8 +65,8 @@ Latest technology POC repo - MERN stack for now, build on it later
 
 # Best practices, Tips, Tricks, Further Reads
 * [**Security guidelines**](https://docs.mongodb.com/manual/administration/security-checklist/) for MongoDB
-* Use [**Nodemon**](https://www.npmjs.com/package/nodemon) to automatically restart server with changes
-* Use [**Concurrently**](https://www.npmjs.com/package/concurrently) to run multiple commands concurrently
+* Install [**Nodemon**](https://www.npmjs.com/package/nodemon) to automatically restart server with changes
+* Install [**Concurrently**](https://www.npmjs.com/package/concurrently) to run multiple commands concurrently
 * **Thinking in react**
   - [**Thinking in react**](https://reactjs.org/docs/thinking-in-react.html)
   - [**What & Why JSX**](https://reactjs.org/docs/introducing-jsx.html)

@@ -1,11 +1,16 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import history from './services/history.service';
+import Routes from './routes';
 import './App.css';
-import ManageUser from './user/ManageUser';
 
 function App() {
   return (
     <div className="App">
-      <ManageUser />
+      <Router history={history}>
+        <Routes />
+      </Router>
     </div>
   );
 }

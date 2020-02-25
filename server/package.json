@@ -4,16 +4,24 @@
   "description": "Server project for MERN POC project",
   "main": "index.js",
   "scripts": {
-    "develop": "nodemon index",
+    "start": "node index",
+    "server": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.2",
-    "mongoose": "^5.8.11"
+    "mongoose": "^5.8.11",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "validator": "^12.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"

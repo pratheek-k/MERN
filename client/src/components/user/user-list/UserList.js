@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-class UserList extends Component {
+export class UserList extends Component {
+
+  constructor(props) {
+    super(props);
+  }
 
   handleDeleteClick(id) {
     this.props.onDelete(id);
@@ -13,8 +18,7 @@ class UserList extends Component {
       <div>
         Users:
         <ul>
-          {
-            users.map((user, i) => (
+          {users && users.map((user, i) => (
               <li key={i}>{user.name} <i className="fa fa-trash" onClick={this.handleDeleteClick.bind(this, user._id)}></i></li>
             ))
           }
@@ -24,4 +28,10 @@ class UserList extends Component {
   }
 }
 
-export default UserList;
+UserList.propTypes = {
+  users: PropTypes.array.isRequired
+}
+
+UserList.defaultProps = {
+  users: []
+}
