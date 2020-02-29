@@ -3,13 +3,14 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 import { ModalComponent } from '../../index';
+import { UsersService } from '../../../services';
 import { ModalOptions } from '../../../models';
+import './AddUser.css';
 
 export class AddUser extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      error: null,
       modalShow: false,
       userValue: {
         name: '',
@@ -27,22 +28,10 @@ export class AddUser extends Component {
   }
 
   addUser() {
-    fetch('http://localhost:5000', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(this.state.userValue)
-    })
-    .then(res => res.json())
-    .then(
-      result => {
+    UsersService.addUser(this.state.userValue)
+      .then(result => {
         this.props.onSuccess();
-      },
-      error => {
-        this.setState({ error });
-      }
-    )
+      });
   }
 
   handleClick() {
@@ -69,7 +58,9 @@ export class AddUser extends Component {
 
     return (
       <>
-      <Button variant="primary" type="button" onClick={this.handleClick}>Add User</Button>
+      <div className="adduser-btn-container">
+        <Button variant="primary" type="button" onClick={this.handleClick}>Add User</Button>
+      </div>
 
       <ModalComponent
         show={this.state.modalShow}

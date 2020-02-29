@@ -1,12 +1,15 @@
 # MERN
+
 Latest technology POC repo - MERN stack for now, build on it later
 
 # Requirements
+
 * ***Node >= 8.10***
 * ***NPM >= 5.6_***
 * ***MongoDB Installed***
 
 # Technologies and Tools
+
 * **Frontend** - *ReactJS, React Bootstrap*
 * **Server** - *Node, Express, Mongoose*
 * **Database** - *MongoDB (Alt: Cloud based Atlas/Stitch)*
@@ -20,16 +23,19 @@ Latest technology POC repo - MERN stack for now, build on it later
   - Default database directory is *`C:\Database\MongoDB`*. Default port is 27017
 
 # Frontend
+
 * Project created with **`npx create-react-app`** command from [**Create react app**](https://reactjs.org/docs/create-a-new-react-app.html). Includes - *react, react-dom, Webpack, Babel, ESLint, JSX, ES6, Typescript, Flow syntax, Unit test runner, Coverage report, Dev server, Build script for JS, CSS and images, Service worker*
 * Currently using [**fetch API**](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) but can use [**Axios**](https://github.com/axios/axios)
 * To run application - **`npm start`** or **`npm run client`**
 
 # Server
+
 * Using [**mongoose**](https://mongoosejs.com/)
 * Using [**dotenv**](https://www.npmjs.com/package/dotenv) to load environments
 * To run application - **`npm run server`**. If no nodemon installed - **`npm start`**
 
 # Database
+
 * Using **mongodb local database instance**
   - Install [**MongoDB**](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) in you machine
   - Install **MongoDB driver**
@@ -50,20 +56,29 @@ Latest technology POC repo - MERN stack for now, build on it later
   - To use this port 27017 port must be opened from your system
 
 # Next steps
+
 * Authentication and authorization
-  - [**Blog 1**](https://medium.com/swlh/jwt-authentication-authorization-in-nodejs-express-mongodb-rest-apis-2019-ad14ec818122)
-  - [**Blog 2**](https://medium.com/quick-code/handling-authentication-and-authorization-with-node-7f9548fedde8)
+* Implement SASS/LESS
 * ES6 in Node server application
-* Declarative routing in react with [**react-router**](https://www.npmjs.com/package/react-router)
+* ~~Declarative routing in react with [**react-router**](https://www.npmjs.com/package/react-router)~~
 * [**Redux State Container**](https://redux.js.org/) using [**react-redux**](https://react-redux.js.org/introduction/quick-start)
 * [**ReactiveX**](http://reactivex.io/) with [**Redux observables**](https://redux-observable.js.org/) or [**rxjs**](https://rxjs-dev.firebaseapp.com/)
-* Currently using [**fetch API**](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) but can use [**Axios**](https://github.com/axios/axios)
+* ~~Implement [**Axios**](https://github.com/axios/axios)~~
 * Implement async-await in FE
-* Use a UI framework
-  - [**Prime React**](https://www.primefaces.org/primereact/#/)
-  - [**React Bootstrap**](https://react-bootstrap.github.io/)
+* ~~Use a UI framework~~
+  - ~~[**Prime React**](https://www.primefaces.org/primereact/#/)~~ Not using
+  - ~~[**React Bootstrap**](https://react-bootstrap.github.io/)~~
 
 # Best practices, Tips, Tricks, Further Reads
+
+* Install below extensions and tools for better coding:
+  - ES7 React/Redux/GraphQL/React-Native Snippets extension by dsznajder for VSCode
+  - TSLint extension by Microsoft for VSCode
+  - eslint extension by Dirk Baeumer for VSCode
+      - eslint is installed as dev dependency. Need to install eslint-cli globally
+      - Using Airbnb standard javascript code style
+  - EditorConfig support extension by EditorConfig for VSCode
+  - Beautify extension by HookyQR for VSCode
 * [**Security guidelines**](https://docs.mongodb.com/manual/administration/security-checklist/) for MongoDB
 * Install [**Nodemon**](https://www.npmjs.com/package/nodemon) to automatically restart server with changes
 * Install [**Concurrently**](https://www.npmjs.com/package/concurrently) to run multiple commands concurrently

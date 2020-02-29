@@ -13,7 +13,7 @@ const requestIntercept = config => {
     return config;
   }
 
-  config.headers.Authorizarion = TokenService.getAuthToken();
+  config.headers.Authorization = TokenService.getAuthToken();
 
   return config;
 }
@@ -29,15 +29,20 @@ const redirectTo = (document, path) => {
 }
 
 const responseError = error => {
-  console.log(error);
   switch (error.response.status) {
     case 400:
-      console.log('400 error response', error)
+      console.log('400 error response', error);
       break;
     case 401:
+      console.log('401 error response', error);
       redirectTo(document, '/');
       break;
     case 404:
+      console.log('404 error response', error);
+      redirectTo(document, '404');
+      break;
+    default:
+      console.log('Default error response', error);
       redirectTo(document, '404');
       break;
   }

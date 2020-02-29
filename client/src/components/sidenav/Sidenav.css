@@ -1,0 +1,25 @@
+.sidenav {
+  background: #2a2a2a;
+  color: #f7f7f7;
+  padding: 4rem 1rem 1rem 2rem;
+  width: 10rem;
+  position: absolute;
+  z-index: 9;
+  height: 100%;
+}
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+}
+.nav-item {
+  padding: 1rem 0;
+}
+.nav-item a {
+  color: #f7f7f7;
+}
+.nav-item a:hover {
+  text-decoration: none;
+}
+.selected a {
+  color: #007bff;
+}

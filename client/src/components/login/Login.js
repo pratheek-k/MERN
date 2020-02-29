@@ -4,9 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import history from '../../services/history.service';
 
-import { UserService, TokenService } from '../../services';
-import { constants } from '../../config/config';
+import { TokenService, AuthService } from '../../services';
 import './Login.css';
 
 export class Login extends Component {
@@ -45,12 +45,15 @@ export class Login extends Component {
       password: this.state.password
     };
 
-    UserService.login(loginData)
+    AuthService.login(loginData)
       .then(result => {
-        console.log(result);
         TokenService.setAuthToken(result.token);
-        UserService.setUser(result.user);
-        document.location = '/home'
+        AuthService.setCurrentUser(result.user);
+        if (result.user.roles.includes('Admin')) {
+          history.push('/manage-user');
+        } else {
+          history.push('/home');
+        }
       });
   }
 

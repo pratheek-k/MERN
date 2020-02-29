@@ -1,0 +1,14 @@
+.header {
+  height: 3rem;
+  position: fixed;
+  background: #2a2a2a;
+  color: #f7f7f7;
+  padding: 0 2rem;
+  z-index: 10;
+}
+.logout {
+  justify-content: flex-end;
+}
+.header-row {
+  height: 100%;
+}

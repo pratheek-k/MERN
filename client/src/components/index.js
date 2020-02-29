@@ -1,4 +1,6 @@
 export * from './login/Login';
+export * from './header/Header';
+export * from './sidenav/Sidenav';
 export * from './home/Home';
 export * from './user/ManageUser';
 export * from './user/user-list/UserList';

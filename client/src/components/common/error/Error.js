@@ -5,6 +5,7 @@ import './Error.css';
 export const ErrorPage = (props) => {
   return (
     <div>
+      <h1>Error Page</h1>
       <h1>{props.title}</h1>
       <p>{props.children}</p>
       {props.button &&

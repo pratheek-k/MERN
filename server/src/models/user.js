@@ -33,7 +33,7 @@ UserSchema.pre('save', async function (next) {
     user.password = await bcrypt.hash(user.password, 10);
   }
 
-  const isPwd = await bcrypt.compare('Password', user.password);
+  // const isPwd = await bcrypt.compare('Password', user.password);
   next();
 });
 

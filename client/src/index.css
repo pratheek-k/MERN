@@ -6,13 +6,29 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 /* normalize */
-html, body, div {
+html, body, .App, #root {
   height: 100%;
+}
+.container {
+  margin: 0;
+  max-width: 100% !important;
+}
+
+/* Common styles */
+.page {
+  height: 100%;
+  padding: 4rem 2rem 1rem 12rem !important;
+}
+.v-center {
+  display: flex;
+  align-items: center;
+}
+.clickable {
+  cursor: pointer;
 }

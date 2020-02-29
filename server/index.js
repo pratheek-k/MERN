@@ -1,11 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const passport = require('passport');
 // routes and middlewares
-const userRoute = require('./src/routes/users');
-const authentication = require('./src/middleware/auth');
+const authRoute = require('./src/routes/authentication');
+const usersRoute = require('./src/routes/users');
+const authentication = require('./src/middleware/passport');
 // environment variables config
 require('dotenv').config(); // TODO: preload - when using import instead of require
 
@@ -34,13 +35,9 @@ app.use(passport.initialize());
 authentication(passport);
 
 // configure routes
-app.use('/api/user', userRoute);
-
-// app.use((err, req, res, next) => {
-//   console.log(err);
-//   next();
-// });
+app.use('/api/auth', authRoute);
+app.use('/api/users', usersRoute);
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`)
+  console.log(`Server running on port ${port}`);
 });

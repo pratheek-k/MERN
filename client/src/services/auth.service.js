@@ -1,8 +1,9 @@
 import Axios from './axios.service';
+import history from './history.service';
 import { StorageService } from './index';
 import { urls, constants } from '../config/config';
 
-export class UserService {
+export class AuthService {
   static login(data) {
     return Axios.post(urls.login, data, {
       headers: {
@@ -11,15 +12,16 @@ export class UserService {
     });
   }
 
-  static getAllUsers(data) {
-    return Axios.get(urls.getAllUsers);
+  static logout() {
+    StorageService.clearAll(constants.currentStorage);
+    history.push('/');
   }
 
-  static deleteUser(id) {
-    return Axios.delete(`${urls.deleteUser}/${id}`)
+  static getCurrentUser() {
+    return StorageService.getItem(constants.user, constants.currentStorage);
   }
 
-  static setUser(user) {
+  static setCurrentUser(user) {
     StorageService.setItem(constants.user, user, constants.currentStorage);
   }
 }

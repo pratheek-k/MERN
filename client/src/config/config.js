@@ -1,10 +1,10 @@
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 class URLs {
-  login = `${baseUrl}/api/user/login`;
-  getAllUsers = `${baseUrl}/api/user/all`;
-  addUser = `${baseUrl}/api/user/add`;
-  deleteUser = `${baseUrl}/api/user/delete`;
+  login = `${baseUrl}/api/auth/login`;
+  getAllUsers = `${baseUrl}/api/users/all`;
+  addUser = `${baseUrl}/api/users/add`;
+  deleteUser = `${baseUrl}/api/users/delete`;
 }
 
 class Constants {
@@ -15,10 +15,19 @@ class Constants {
   currentStorage = this.localStorage;
 }
 
+class Roles {
+  admin = ['Admin'];
+  user = ['User'];
+  all = ['Admin', 'User'];
+  any = [];
+}
+
 const urls = new URLs();
 const constants = new Constants();
+const roles = new Roles();
 
 export {
   urls,
-  constants
+  constants,
+  roles
 }

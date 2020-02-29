@@ -13,7 +13,7 @@ export const ModalComponent = (props) => {
   }, [props.show]);
 
   return (
-    <Modal show={show} onHide={props.onClose.bind(this, false)}>
+    <Modal show={show} onHide={props.onClose.bind(this, false)} centered>
       <Modal.Header closeButton={opts.closeIcon}>
         <Modal.Title>{props.title}</Modal.Title>
       </Modal.Header>

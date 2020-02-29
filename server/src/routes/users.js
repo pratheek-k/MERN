@@ -1,41 +1,20 @@
 const express = require('express');
 const passport = require('passport');
 const registerValidate = require('../validation/register');
-const loginValidate = require('../validation/login');
 const User = require('../models/User');
 const config = require('../config/config');
 
 const router = express.Router();
 
-router.post('/login', async (req, res) => {
-  const { errors, isValid } = loginValidate(req.body);
-
-  if (!isValid) {
-    return res.status(400).json(errors);
-  }
-
-  try {
-    const { email, password } = req.body;
-    const user = await User.findByCredentials(email, password);
-
-    if (!user) return res.status(401).send({ error: 'Login failed! Check credentials' });
-
-    const token = await user.generateAuthToken();
-    res.send({ user, token });
-  } catch (error) {
-    res.status(400).send(error);
-  }
-});
-
-router.get('/all',
+router.get('/all', passport.authenticate(config.configs.auth_strategy),
   (req, res, next) => {
-    User.find({}, 'name')
+    User.find({}, 'name email')
       .then(data => res.json(data))
       .catch(next)
   }
 );
 
-router.post('/add',
+router.post('/add', passport.authenticate(config.configs.auth_strategy),
   async (req, res) => {
     const { errors, isValid } = registerValidate(req.body);
 
@@ -45,13 +24,16 @@ router.post('/add',
 
     try {
       const user = new User(req.body);
-      const roles = ['user'];
+
+      const roles = ['User'];
       if (user.isAdmin) {
-        roles.push('admin');
+        roles.push('Admin');
       }
       user.roles = roles;
+
       await user.save();
       const token = await user.generateAuthToken();
+
       res.status(201).json({ user, token });
     } catch (error) {
       res.status(400).send(error);

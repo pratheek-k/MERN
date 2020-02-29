@@ -8,6 +8,8 @@ const RouteWithSubRoutes = (route) => {
     <Route
       path={route.path}
       exact={route.exact}
+      access={route.access}
+      isPrivate={route.isPrivate}
       component={props => <route.component {...props} routes={route.route} />} />
   )
 }

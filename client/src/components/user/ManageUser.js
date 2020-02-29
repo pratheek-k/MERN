@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { UserList, AddUser } from '../../components';
-import { UserService } from '../../services';
+import Container from 'react-bootstrap/Container';
+import { UserList, AddUser, Header, Sidenav } from '../../components';
+import { UsersService } from '../../services';
 
 export class ManageUser extends Component {
   constructor(props) {
@@ -18,26 +19,29 @@ export class ManageUser extends Component {
   }
 
   getAllUsers() {
-    UserService.getAllUsers()
+    UsersService.getAllUsers()
       .then(result => {
         this.setState({ users: result });
       });
   }
 
   deleteUser(id) {
-    UserService.deleteUser(id)
+    UsersService.deleteUser(id)
       .then(result => {
-        console.log(result);
         this.getAllUsers();
       });
   }
 
   render() {
     return (
-      <div>
+      <>
+      <Header />
+      <Sidenav />
+      <Container className="page">
         <AddUser onSuccess={this.getAllUsers} />
         <UserList {...this.state} onDelete={this.deleteUser} />
-      </div>
+      </Container>
+      </>
     )
   }
 }
