@@ -32,3 +32,14 @@ html, body, .App, #root {
 .clickable {
   cursor: pointer;
 }
+.fullpage {
+  height: 100%;
+}
+.fullpage .row {
+  height: 100%;
+}
+.divider {
+  height: 0px;
+  width: 100%;
+  border-bottom: 1px solid #ced4da;
+}

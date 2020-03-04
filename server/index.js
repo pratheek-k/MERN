@@ -32,6 +32,7 @@ app.use(bodyParser.json({limit: '10mb', extended: true}));
 app.use(bodyParser.urlencoded({limit: '10mb', extended: true}));
 // authentication middleware with passport
 app.use(passport.initialize());
+app.use(passport.session());
 authentication(passport);
 
 // configure routes

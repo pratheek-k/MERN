@@ -3,17 +3,15 @@ import Toast from 'react-bootstrap/Toast';
 
 import './Toast.css';
 
-const ToastService = ({ children, props }) => {
-  const [show, toggleShow] = useState(true);
+export const ToastComponent = props => {
+  const [show, toggleShow] = useState(false);
 
   return (
-    <>
-      <Toast show={show} onClose={() => toggleShow(false)}>
+    <div className="toast-container">
+      <Toast show={show} onClose={() => toggleShow(false)} delay={3000} autohide>
         <Toast.Header>{props.title}</Toast.Header>
-        <Toast.Body>{children}</Toast.Body>
+        <Toast.Body>{props.children}</Toast.Body>
       </Toast>
-    </>
+    </div>
   )
 }
-
-export default ToastService;

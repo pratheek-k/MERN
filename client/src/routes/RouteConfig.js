@@ -17,6 +17,15 @@ const routes = [
     noNav: true
   },
   {
+    path: '/login',
+    exact: true,
+    component: Login,
+    access: roles.any,
+    isPrivate: false,
+    title: 'Login',
+    noNav: true
+  },
+  {
     path: '/home',
     exact: true,
     component: Home,
@@ -42,7 +51,15 @@ const routes = [
     isPrivate: false,
     title: 'Error',
     noNav: true
-  }
+  },
+  {
+    path: '*',
+    component: ErrorPage,
+    access: roles.any,
+    isPrivate: false,
+    title: 'Page not found',
+    noNav: true
+  },
 ];
 
 export default routes;

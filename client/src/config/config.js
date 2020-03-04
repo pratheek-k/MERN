@@ -22,12 +22,19 @@ class Roles {
   any = [];
 }
 
+class RoleList {
+  admin = 'Admin';
+  user = 'User';
+}
+
 const urls = new URLs();
 const constants = new Constants();
 const roles = new Roles();
+const roleList = new RoleList();
 
 export {
   urls,
   constants,
-  roles
+  roles,
+  roleList
 }

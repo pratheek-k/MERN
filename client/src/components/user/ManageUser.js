@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
-import { UserList, AddUser, Header, Sidenav } from '../../components';
+import { UserList, AddUser } from '../../components';
 import { UsersService } from '../../services';
 
 export class ManageUser extends Component {
@@ -35,8 +35,6 @@ export class ManageUser extends Component {
   render() {
     return (
       <>
-      <Header />
-      <Sidenav />
       <Container className="page">
         <AddUser onSuccess={this.getAllUsers} />
         <UserList {...this.state} onDelete={this.deleteUser} />

@@ -8,6 +8,7 @@ export default function RouteWrapper({
   component: Component,
   access,
   isPrivate,
+  path,
   ...rest
 }) {
   const signed = TokenService.getAuthToken() || false;
@@ -17,13 +18,17 @@ export default function RouteWrapper({
   const userRoles = (currentUser && currentUser.roles) ? currentUser.roles : [];
 
   if (isPrivate && !signed) {
-    return <Redirect to="/" />;
+    return <Redirect to="/login" />;
   }
   
   isAccess = (access === roles.any) || access.some(role => userRoles.some(userRole => userRole.toLowerCase() === role.toLowerCase()));
 
   if (isAccess) {
-    return <Route {...rest} component={Component} />;
+    if (path === '/') {
+      return <Redirect to="/login" />;
+    }
+
+    return <Route {...rest} path={path} component={Component} />;
   }
 
   return <Redirect to="/error" />

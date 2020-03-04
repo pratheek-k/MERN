@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import history from '../../services/history.service';
 
+import history from '../../services/history.service';
 import { TokenService, AuthService } from '../../services';
 import './Login.css';
 
@@ -49,7 +49,7 @@ export class Login extends Component {
       .then(result => {
         TokenService.setAuthToken(result.token);
         AuthService.setCurrentUser(result.user);
-        if (result.user.roles.includes('Admin')) {
+        if (AuthService.isUserAdmin()) {
           history.push('/manage-user');
         } else {
           history.push('/home');
@@ -59,34 +59,38 @@ export class Login extends Component {
 
   render() {
     return (
-      <Container>
-        <Row className="justify-content-center">
-          <Col md="4" lg="4">
-            <Form noValidate validated={this.state.validated} onSubmit={this.handleSubmit}>
-              <Form.Group controlId="loginForm.Email">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  required
-                  type="email"
-                  name="email"
-                  placeholder="Enter email"
-                  value={this.state.email}
-                  onChange={this.handleChange} />
-              </Form.Group>
+      <Container className="fullpage">
+        <Row className="justify-content-center align-items-center">
+          <Col md="4" lg="4" className="login-page">
+            <div className="login-title">Sign in</div>
+            <div className="divider"></div>
+            <div className="login-form-container">
+              <Form noValidate validated={this.state.validated} onSubmit={this.handleSubmit}>
+                <Form.Group controlId="loginForm.Email">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control
+                    required
+                    type="email"
+                    name="email"
+                    placeholder="Enter email"
+                    value={this.state.email}
+                    onChange={this.handleChange} />
+                </Form.Group>
 
-              <Form.Group controlId="loginForm.Password">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  required
-                  type="password"
-                  name="password"
-                  placeholder="Enter password"
-                  value={this.state.password}
-                  onChange={this.handleChange} />
-              </Form.Group>
+                <Form.Group controlId="loginForm.Password">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control
+                    required
+                    type="password"
+                    name="password"
+                    placeholder="Enter password"
+                    value={this.state.password}
+                    onChange={this.handleChange} />
+                </Form.Group>
 
-              <Button variant="primary" type="submit">Login</Button>
-            </Form>
+                <Button variant="primary" type="submit">Login</Button>
+              </Form>
+            </div>
           </Col>
         </Row>
       </Container>

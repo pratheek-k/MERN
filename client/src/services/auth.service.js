@@ -1,7 +1,7 @@
 import Axios from './axios.service';
 import history from './history.service';
 import { StorageService } from './index';
-import { urls, constants } from '../config/config';
+import { urls, constants, roleList } from '../config/config';
 
 export class AuthService {
   static login(data) {
@@ -23,5 +23,15 @@ export class AuthService {
 
   static setCurrentUser(user) {
     StorageService.setItem(constants.user, user, constants.currentStorage);
+  }
+
+  static isUserAdmin() {
+    const currentUser = this.getCurrentUser();
+
+    if (currentUser && currentUser.roles && currentUser.roles.includes(roleList.admin)) {
+      return true;
+    }
+
+    return false;
   }
 }

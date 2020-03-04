@@ -17,15 +17,17 @@ const auth = (passport) => {
 
       if (!user) return done(null, false, { message: 'Unauthorized' });
 
-      passport.serializeUser((user, done) => {
-        done (null, user);
-      });
-
       return done(null, user);
     })
   })
 
   passport.use(strategy);
+  passport.serializeUser((user, done) => {
+    done (null, user);
+  });
+  passport.deserializeUser((obj, done) => {
+    done (null, obj);
+  });
 }
 
 module.exports = auth;
